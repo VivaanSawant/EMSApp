@@ -3,6 +3,7 @@ import "./App.css";
 
 import haversineDistance from "./distanceCalculator";
 import { getGlobUnversity, setGlobUniversity } from "./globalState";
+import returnLatLon from "./latLonScrape";
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const API_KEY = "AIzaSyCw3A1xUQ_lp7AJ8xBVC2SCnHUgidyiATk";
@@ -98,6 +99,7 @@ const App = () => {
 
                 console.log(parseFloat(latResponse.text()));
                 console.log(parseFloat(lonResponse.text()));
+                console.log(returnLatLon());
 
                 const havDistance = haversineDistance(geoInfo.lat, geoInfo.lon, parseFloat(latResponse.text()), parseFloat(lonResponse.text())); 
 
