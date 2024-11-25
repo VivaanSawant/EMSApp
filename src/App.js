@@ -146,6 +146,7 @@ const App = () => {
               const response2 = result2.response;
               console.log(prompt2);
               setText2(response2.text());
+              console.log(university);
             }
         } catch (error) {
             console.log(error);
