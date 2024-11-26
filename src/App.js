@@ -141,8 +141,11 @@ const App = () => {
             await wait(1000);
             console.log(text);
             if(distance < 1.5) {
+                await wait(100);
               const prompt2 = `What is the number of the ${university} police department?`;
+              await wait(100);
               const result2 = await model.generateContent(prompt2);
+              await wait(100);
               const response2 = result2.response;
               console.log(prompt2);
               setText2(response2.text());
